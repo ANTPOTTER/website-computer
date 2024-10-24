@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Gates</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+    <h2>Logic Gates in CSS</h2>
+    
+    <!-- AND Gate -->
+    <div class="gate">
+        <h3>AND Gate</h3>
+        <input type="checkbox" id="and-input-1">
+        <label for="and-input-1">Input 1</label>
+        
+        <input type="checkbox" id="and-input-2">
+        <label for="and-input-2">Input 2</label>
+        
+        <div class="output and-gate">Output: <span></span></div>
+    </div>
+    
+    <!-- OR Gate -->
+    <div class="gate">
+        <h3>OR Gate</h3>
+        <input type="checkbox" id="or-input-1">
+        <label for="or-input-1">Input 1</label>
+        
+        <input type="checkbox" id="or-input-2">
+        <label for="or-input-2">Input 2</label>
+        
+        <div class="output or-gate">Output: <span></span></div>
+    </div>
+    
+        <!-- XOR Gate -->
+    <div class="gate">
+        <h3>XOR Gate</h3>
+        <input type="checkbox" id="xor-input-1">
+        <label for="xor-input-1">Input 1</label>
+        
+        <input type="checkbox" id="xor-input-2">
+        <label for="xor-input-2">Input 2</label>
+        
+        <div class="output xor-gate">Output: <span></span></div>
+    </div>
+    
+    <!-- NOT Gate -->
+    <div class="gate">
+        <h3>NOT Gate</h3>
+        <input type="checkbox" id="not-input">
+        <label for="not-input">Input</label>
+        
+        <div class="output not-gate">Output: <span></span></div>
+    </div>
+</body>
+</html>
