@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.gate {
+    margin-bottom: 20px;
+}
+
+.output span {
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* AND Gate: Only "true" (checked) if both inputs are checked */
+.and-gate span::before {
+    content: '0'; /* Default is false */
+}
+
+#and-input-1:checked + label + #and-input-2:checked + label + .and-gate span::before {
+    content: '1'; /* Only true if both are checked */
+}
+
+/* OR Gate: "true" if either or both inputs are checked */
+.or-gate span::before {
+    content: '0'; /* Default is false */
+}
+
+#or-input-1:checked + label + #or-input-2 + label + .or-gate span::before,
+#or-input-2:checked + label + .or-gate span::before {
+    content: '1'; /* True if either input is checked */
+}
+
+/* NOT Gate: "true" (1) if input is unchecked, "false" (0) if checked */
+.not-gate span::before {
+    content: '1'; /* Default output is true */
+}
+
+#not-input:checked + label + .not-gate span::before {
+    content: '0'; /* Changes to false when checked */
+}
+
+/* XOR Gate: "true" (1) if exactly one input is checked */
+.xor-gate span::before {
+    content: '0'; /* Default is false */
+}
+
+#xor-input-1:checked + label + #xor-input-2:not(:checked) + label + .xor-gate span::before,
+#xor-input-2:checked + label + #xor-input-1:not(:checked) + label + .xor-gate span::before {
+    content: '1'; /* True if only one input is checked */
+}
